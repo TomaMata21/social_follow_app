@@ -2,15 +2,27 @@
 
 A Social animation effect for following user inspired by animations
 
+## Demo in video
+
+https://github.com/TomaMata21/design_slider_app/assets/70801569/3086c047-d163-4579-90cc-01798b43309e
+
+
 ## Getting Started
+1. **Prerequisites**: Ensure you have Flutter installed on your system.
+2. **Clone this Repository**:
+ ```bash
+git clone https://github.com/TomaMata21/social_follow_app.git
+```
+3. **Navigate to the Directory**:
+  ```bash
+cd social_follow_app
+```  
+4. **Install dependencies**:
+  ```bash
+ flutter pub get
+```
+5. **Run the App**:
+ ```bash
+ flutter run
+```  
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
