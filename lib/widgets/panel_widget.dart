@@ -68,25 +68,29 @@ class PanelWidget extends StatelessWidget {
             )),
         const Gap(12),
         Expanded(
-          child: ListView(
+          child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            children: user.photos
-                .map(
-                  (photo) => Container(
-                    height: 100,
-                    width: 100,
-                    padding: const EdgeInsets.only(right: 5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                          image: AssetImage(photo),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                )
-                .toList(),
+            physics: const BouncingScrollPhysics(),
+            child: Row(
+              children: user.photos
+                  .map(
+                    (photo) => Container(
+                      height: 100,
+                      width: 100,
+                      margin: const EdgeInsets.only(right: 5, left: 5),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(photo),
+                            fit: BoxFit.cover,
+                          )),
+                    ),
+                  )
+                  .toList(),
+            ),
           ),
         ),
+        Expanded(child: Container()),
       ],
     );
   }

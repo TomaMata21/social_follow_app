@@ -6,9 +6,9 @@ final users = [
   User(
     name: "Alice Kponam",
     city: "Lomé",
-    country: "Togo",
+    country: "Togo 🇹🇬",
     profile: Assets.profile(1),
-    description: lorem(paragraphs: 1, words: 50),
+    description: lorem(paragraphs: 1, words: 25),
     photos: [
       Assets.photo(1),
       Assets.photo(2),
@@ -21,9 +21,9 @@ final users = [
   User(
     name: "Rébécca Azoti",
     city: "Cotonou",
-    country: "Bénin",
+    country: "Bénin 🇧🇯",
     profile: Assets.profile(2),
-    description: lorem(paragraphs: 1, words: 50),
+    description: lorem(paragraphs: 1, words: 20),
     photos: [
       Assets.photo(4),
       Assets.photo(5),
@@ -36,9 +36,9 @@ final users = [
   User(
     name: "Amoin Zérékou",
     city: "Cocody",
-    country: "Côte d'ivoire",
+    country: "Côte d'ivoire 🇨🇮",
     profile: Assets.profile(3),
-    description: lorem(paragraphs: 1, words: 50),
+    description: lorem(paragraphs: 1, words: 18),
     photos: [
       Assets.photo(7),
       Assets.photo(8),
@@ -51,9 +51,9 @@ final users = [
   User(
     name: "Grace Baba",
     city: "Accra",
-    country: "Ghana",
+    country: "Ghana 🇬🇭",
     profile: Assets.profile(4),
-    description: lorem(paragraphs: 1, words: 50),
+    description: lorem(paragraphs: 1, words: 20),
     photos: [
       Assets.photo(10),
       Assets.photo(11),

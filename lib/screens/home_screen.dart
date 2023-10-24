@@ -23,12 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: const Icon(Icons.person_outline),
+          icon: const Icon(
+            Icons.person_outline,
+            color: Colors.white,
+          ),
           onPressed: () {},
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.close),
+            icon: const Icon(
+              Icons.close,
+              color: Colors.white,
+            ),
             onPressed: () {},
           ),
         ],
@@ -36,14 +42,15 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SlidingUpPanel(
         color: Colors.transparent,
         controller: panelController,
-        minHeight: 150,
-        maxHeight: 340,
+        minHeight: 180,
+        // maxHeight: 340,
         parallaxEnabled: true,
         parallaxOffset: 0.5,
         body: PageView(
           children: users
               .map((user) => Image.asset(
                     user.profile,
+                    fit: BoxFit.cover,
                   ))
               .toList(),
           onPageChanged: (index) => setState(() {
@@ -53,10 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
         panelBuilder: (ScrollController scrollController) => PanelWidget(
             user: user,
             onClickedPanel: panelController.open,
-          onClickedFollowing: () => setState(() {
-            user.isFollowing = !user.isFollowing;
-          })
-        ),
+            onClickedFollowing: () => setState(() {
+                  user.isFollowing = !user.isFollowing;
+                })),
       ),
       bottomNavigationBar: const CustomBottomNavigationBar(),
     );
