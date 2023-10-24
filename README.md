@@ -4,7 +4,10 @@ A Social animation effect for following user inspired by animations
 
 ## Demo in video
 
-https://github.com/TomaMata21/design_slider_app/assets/70801569/3086c047-d163-4579-90cc-01798b43309e
+
+https://github.com/TomaMata21/social_follow_app/assets/70801569/4e75b953-3caf-4d51-9042-0b6ca015c46c
+
+
 
 
 ## Getting Started
