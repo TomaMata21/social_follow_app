@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:social_anim_app/models/user.dart';
+import 'package:social_anim_app/widgets/following_button.dart';
 
 class PanelHeader extends StatelessWidget {
   const PanelHeader({
@@ -15,18 +16,20 @@ class PanelHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+
       children: [
         Expanded(child: buildUser()),
-        // FollowButton(
-        //   isFollowing: user.isFollowing,
-        //   onClickedFollowing: onClickedFollowing,
-        // ),
+        FollowingButton(
+          isFollowing: user.isFollowing,
+          onClickedFollowing: onClickedFollowing,
+        ),
       ],
     );
   }
 
   Widget buildUser() {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           user.name,
