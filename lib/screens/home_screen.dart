@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final panelController = PanelController();
   int index = 0;
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SlidingUpPanel(
         color: Colors.transparent,
+        controller: panelController,
+        minHeight: 150,
+        maxHeight: 340,
+        parallaxEnabled: true,
+        parallaxOffset: 0.5,
         body: PageView(
           children: users
               .map((user) => Image.asset(
@@ -46,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         panelBuilder: (ScrollController scrollController) => PanelWidget(
             user: user,
-            onClickedPanel: () {},
+            onClickedPanel: panelController.open,
           onClickedFollowing: () => setState(() {
             user.isFollowing = !user.isFollowing;
           })
