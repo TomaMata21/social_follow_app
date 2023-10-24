@@ -8,6 +8,7 @@ class User {
   final int followers;
   final int following;
   final int post;
+  bool isFollowing;
 
   User({
     required this.name,
@@ -19,5 +20,6 @@ class User {
     required this.followers,
     required this.following,
     required this.post,
+    this.isFollowing = false,
   });
 }
